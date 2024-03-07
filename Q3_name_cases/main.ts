@@ -1,7 +1,7 @@
-let personName = ("maryam Jamil");
+let personName = ("maryam");
 
 console.log(personName .toLowerCase());
 
 console.log(personName .toUpperCase());
 
-console.log(personName)
+console.log(personName.charAt(0).toUpperCase() + personName.slice(1).toLowerCase());
