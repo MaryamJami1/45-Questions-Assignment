@@ -1,36 +1,37 @@
-//Creating a Guest List Array
-var guestList = ["Aqsa", "Hareem", "Maha", "Hussain"];
-//Making variable for those guest who cant come
-var dontCome = guestList[0];
-//Print the name of guest who cant come
-console.log(dontCome, "Nahi aah asakti");
-//Add or Remove guest from guest list Array
-guestList.splice(0, 1, "Miral");
-//Message Print for Bigger table
-console.log("Good news! We have found a bigger table for iftar");
-//Adding a new guest at starting index of array
-guestList.unshift("Ahmed");
-//Adding a new guest at ending index of array
-guestList.push("Moosa");
-//Get a middle index of our guest list array
-var middleIndex = Math.floor(guestList.length / 2);
-//Adding a new guest to middle index of array
-guestList.splice(middleIndex, 0, "Bilal");
-//Print Message of updated list
-console.log("Updated list of our guests");
-//Sending a invitation message to our guests one by one with their names
-guestList.forEach(function (oneguest) { return console.log("Assalam-o-alaikum ".concat(oneguest, ", Would you like to Iftar with me?")); });
-// Inform that only two guests can be invited for dinner
-console.log("unfortunatily, the new dinner table want arrive on time, so I can only invite two guest to dinner with me");
-//Using while .loop to remove guests from the array until only two names remain
-while (guestList.length > 2) {
-    var removedGuest = guestList.pop();
-    console.log("Sorry, ".concat(removedGuest, ", I can't invite you to dinner"));
-}
-// Printing a invitations to the last two guest on the list
-console.log("Invitation to the last 2 Guests");
-guestList.forEach(function (lasttwo) { return console.log("Luckly ".concat(lasttwo, ", You are still invited to dinner")); });
-// Removing last two Guests from the list
-guestList.pop();
-guestList.pop();
-console.log("Empty List:", guestList);
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+//Moving a array of countries and print its Original Order
+var countriesToVisit = ["Turkey", "Dubai", "Italy", "Norway"];
+console.log("Original Order:", countriesToVisit);
+console.log("---------------------------------------------------------------------------------------");
+// Print the array is Alphabetical order without modifying the actual array list
+console.log("Alphabetical Order:", __spreadArray([], countriesToVisit, true).sort());
+console.log("----------------------------------------------------------------------------------------");
+//show that the Array still in its original order 
+console.log("still in original order", countriesToVisit);
+console.log("-----------------------------------------------------------------------------------------");
+// Print the Array in Reversed Order without modifying the Actual Array list
+console.log("Reverse order:", __spreadArray([], countriesToVisit, true).reverse());
+console.log("-----------------------------------------------------------------------------------------");
+//show that the Array still in its original order 
+console.log("still in original order", countriesToVisit);
+console.log("------------------------------------------------------------------------------------------");
+//We have changed the original Array order now
+console.log("Original Array Reversed:", countriesToVisit.reverse());
+console.log("-------------------------------------------------------------------------------------------");
+//Print the to show back to its original order
+console.log("Back to Original Order:", countriesToVisit.reverse());
+console.log("-------------------------------------------------------------------------------------------");
+// print the Array to show that its order has been change in Alphabetical order now
+console.log("Sorted in Alphabetical Order:", countriesToVisit.sort());
+console.log("--------------------------------------------------------------------------------------------");
+//We have changed again the original Array order now in reverse again
+console.log("Original Array Reversed Again:", countriesToVisit.reverse());
+console.log("---------------------------------------------------------------------------------------------");
